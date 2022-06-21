@@ -51,9 +51,11 @@ header {
     top: 0px;
     background-color: inherit;
     z-index: 10000;
-    user-select: none;
 }
 
+header *{
+    user-select:none;
+}
 header .header-container {
     width: auto;
     max-width: var(--mx-width);
@@ -241,6 +243,7 @@ section .my-projects .projects-container .project {
     align-items: flex-start;
     text-align: start;
     text-transform: capitalize;
+    max-height:500px;
 }
 
 section .my-services .services-container .service *:nth-child(1) {
@@ -389,7 +392,7 @@ body section .bg-hover:hover,
     section .my-services .services-container,
     section .my-projects .projects-container {
         grid-template-columns: repeat(2, auto);
-        grid-auto-rows: minmax(300px, 60vh);
+        grid-auto-rows: minmax(300px, 500px);
         gap: 1rem;
     }
 
